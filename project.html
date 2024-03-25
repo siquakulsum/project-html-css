@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <script src="https://kit.fontawesome.com/ff90116f27.js" crossorigin="anonymous"></script>
+    <style>
+         .box{
+            box-sizing: border-box;
+         }
+         
+.container {
+  display: flex;
+  padding: 66px;
+  margin: 20px auto ;
+  height: 90%;
+  border: 2px solid rgba(245, 41, 119, 0.4);
+  background-color:rgba(209, 141, 167, 0.4);
+  text-align: left;
+  justify-content: center;
+  border-radius: 10px;
+  width: 90%;
+  }
+#register{
+    width:450px ;
+    max-height: 1300px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: -10px;
+    font-size: larger;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+input{ 
+  width: 50%;
+  border: 0;
+  outline: 0;
+  padding: 23px 39px;
+  margin: -8px 0  -12px 0;
+  display: inline-block;
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 5px;
+  text-align: left;
+  border-top: 2px solid rgb(244 162 194);
+  border-left:2px solid rgb(244 162 194);
+  border-bottom:2px solid rgb(244 162 194);
+  border-right:2px solid rgb(244 162 194);
+  font-size: 10px;
+  line-height: 0.5px;
+  margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: navy;   
+    font-size: 15px;
+    justify-content: center;
+}
+a.btn{
+    background-color: whitesmoke;
+}
+
+a:hover{
+    color: black;
+    background-color: white;
+    display: inline-block;   
+}
+a:visited{
+    background-color: orange;
+}
+.btn:hover{
+    color: antiquewhite;
+    background-color: rgba(238, 102, 154, 0.4);
+}
+.btn {
+    background-color: whitesmoke;
+        padding: 9px 10px;
+        border:2px solid white;
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 10px;
+        width: 128px;
+        margin-top: 18px;
+        display: inline-block;
+        font-size: 17px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        min-height: 1px;
+        
+}
+.roboto-regular{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+input[type=checkbox]{
+    
+    width: 30px;
+    height: 16px;
+}
+.fa-brands{
+    line-height:0.5;
+    display: inline-block;
+    font-size:20px;
+}
+.policy{
+    font-size:15px ;
+    text-align: center;
+    bottom: -9px;
+    position: absolute;
+}
+.page{
+    border: 2px solid white;
+    margin: 1px 3px;
+    padding: 1px 3px;
+    background-color: white;
+    font-size: larger;
+}
+ form i{
+    position: absolute;
+    display: inline-block;
+    width: 70px;
+    left: 1250px;
+    align-items: center;
+    color: black;
+    font-size: larger;
+}
+h1{  
+    padding-top: 20px;
+    justify-content: left 20px;
+    font-size: 20px;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 0px;
+
+}
+.continue i{
+    text-align: left;
+    width: 100px;
+    right: 100px;
+    display: inline;
+    font-size: 30px;
+}
+#accept-policies{
+    font-size: 30px;
+    width: 70px;
+    border-color: pink;
+    font-family: "Poppins", sans-serif;
+}
+h2{
+    text-align: left;
+    font-size: 15px;
+    
+}
+#website{
+    font-size: 16px;
+    justify-content: center;
+    margin-top: 45px;
+}
+#button{
+    background-color: whitesmoke;
+}
+.image{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 450px;
+}
+.element.style{
+   color:  rgb(248, 186, 196)
+}
+form{
+    width: 450px;
+    height: 650px;
+}
+.page label h2 {
+    right: 20px;
+    transform: translate(16%);
+}
+.page h1 {
+    text-align: left;
+    transform: translate(16%);
+}
+.brands {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.brands .fa-brands {
+	padding: 12px 21px;
+	color: black;
+	text-decoration: none;	
+	text-shadow:  #ee6ab7;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="register.png" alt="register"  >
+        <div id="register" class="page">
+            <form action="action_page.php">
+                 <h1>GET STARTED</h1><br>
+            <div >
+                <label for="Name"> <h2>Name</h2> </label>
+                 <input type="text" placeholder="Name" name="Name" id="Name"  >
+            </div>
+            <div>
+                <Label for="Email"><h2>Email</h2></Label>
+                <input type="text" placeholder="Email" name="Email" id="Email">
+            </div>
+            <div>
+                <label for="Password"><h2>Password</h2></label>
+                <input type="text" placeholder="Password" name="Password" id="Password" >
+            </div>
+            <a href="https://google.com"
+                    class="btn" >Sign Up</a>
+                    
+            <a id="button" href="login.html"
+                     class="btn">Sign In</a>
+            <div class="continue" id="website" >
+                <p>or continue with</p>
+            <div class="brands">
+                <a href="https://vk.com" class="fa-brands fa-vk" style="color:rgb(248, 186, 196);"></a> 
+                <a href="https://google.com" class="fa-brands fa-google" style="color:rgb(248, 186, 196);"></a>  
+                <a href="https://facebook.com" class="fa-brands fa-facebook" style="color:rgb(248, 186, 196);"></a> 
+        </div> </div>
+                <div class="policy" >
+                   
+                    <input type="checkbox" name="accept-policies" id="accept-policies" value="I Agree to the terms of Service and privacy policy" required="required">
+                    <label for="accept-policies">I  agree to the
+                        <a href="/tos" class="strong">
+                          Terms of Service</a>
+                              and
+                        <a href="/privacy" class="strong">Privacy Policy</a>
+                        
+                    </label>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
