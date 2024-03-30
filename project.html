@@ -3,245 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project</title>
+    <title>login form</title>
     <script src="https://kit.fontawesome.com/ff90116f27.js" crossorigin="anonymous"></script>
     <style>
-         .box{
-            box-sizing: border-box;
-         }
-         
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, rgba(238, 102, 154, 0.4), rgba(238, 102, 154, 0.4));	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 700px;
+	width: 1200px;
+
+}
+
 .container {
-  display: flex;
-  padding: 66px;
-  margin: 20px auto ;
-  height: 90%;
-  border: 2px solid rgba(245, 41, 119, 0.4);
-  background-color:rgba(209, 141, 167, 0.4);
-  text-align: left;
-  justify-content: center;
-  border-radius: 10px;
-  width: 90%;
-  }
-#register{
-    width:450px ;
-    max-height: 1300px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: -10px;
-    font-size: larger;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-input{ 
-  width: 50%;
-  border: 0;
-  outline: 0;
-  padding: 23px 39px;
-  margin: -8px 0  -12px 0;
-  display: inline-block;
-  font-weight: 600;
-  background-color: transparent;
-  border-radius: 10px;
-  height: 5px;
-  text-align: left;
-  border-top: 2px solid rgb(244 162 194);
-  border-left:2px solid rgb(244 162 194);
-  border-bottom:2px solid rgb(244 162 194);
-  border-right:2px solid rgb(244 162 194);
-  font-size: 10px;
-  line-height: 0.5px;
-  margin-bottom: 10px;
-}
-a{
-    text-decoration: none;
-    color: navy;   
-    font-size: 15px;
-    justify-content: center;
-}
-a.btn{
-    background-color: whitesmoke;
+	align-items: center;
+	justify-content: center;
+	min-height: 600px;
 }
 
-a:hover{
-    color: black;
-    background-color: white;
-    display: inline-block;   
+.screen {		
+	background: linear-gradient(90deg, #fd90dd, rgba(245, 171, 199, 0.4));		
+	display: inline-flex;
+	height: 600px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #dea4d0;
+	align-items:center ;
+	justify-content: center;
+	position: absolute;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: px;
 }
-a:visited{
-    background-color: orange;
-}
-.btn:hover{
-    color: antiquewhite;
-    background-color: rgba(238, 102, 154, 0.4);
-}
-.btn {
-    background-color: whitesmoke;
-        padding: 9px 10px;
-        border:2px solid white;
-        cursor: pointer;
-        font-size: 17px;
-        border-radius: 10px;
-        width: 128px;
-        margin-top: 18px;
-        display: inline-block;
-        font-size: 17px;
-        text-align: center;
-        font-family: "Roboto", sans-serif;
-        min-height: 1px;
-        
-}
-.roboto-regular{
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-input[type=checkbox]{
-    
-    width: 30px;
-    height: 16px;
-}
-.fa-brands{
-    line-height:0.5;
-    display: inline-block;
-    font-size:20px;
-}
-.policy{
-    font-size:15px ;
-    text-align: center;
-    bottom: -9px;
-    position: absolute;
-}
-.page{
-    border: 2px solid white;
-    margin: 1px 3px;
-    padding: 1px 3px;
-    background-color: white;
-    font-size: larger;
-}
- form i{
-    position: absolute;
-    display: inline-block;
-    width: 70px;
-    left: 1250px;
-    align-items: center;
-    color: black;
-    font-size: larger;
-}
-h1{  
-    padding-top: 20px;
-    justify-content: left 20px;
-    font-size: 20px;
-    display: grid;
-    margin-top: 15px;
-    margin-bottom: 0px;
 
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
 }
-.continue i{
-    text-align: left;
-    width: 100px;
-    right: 100px;
-    display: inline;
-    font-size: 30px;
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
 }
-#accept-policies{
-    font-size: 30px;
-    width: 70px;
-    border-color: pink;
-    font-family: "Poppins", sans-serif;
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
 }
-h2{
-    text-align: left;
-    font-size: 15px;
-    
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: white;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
 }
-#website{
-    font-size: 16px;
-    justify-content: center;
-    margin-top: 45px;
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: rgba(238, 102, 154, 0.4);	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
 }
-#button{
-    background-color: whitesmoke;
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, rgba(238, 102, 154, 0.4), #f0a9d2);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
 }
-.image{
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 450px;
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: rgba(247, 152, 188, 0.4);	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
 }
-.element.style{
-   color:  rgb(248, 186, 196)
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
 }
-form{
-    width: 450px;
-    height: 650px;
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
 }
-.page label h2 {
-    right: 20px;
-    transform: translate(16%);
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: rgb(173 7 70 / 40%);
 }
-.page h1 {
-    text-align: left;
-    transform: translate(16%);
+
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
 }
-.brands {
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: rgba(248, 89, 150, 0.4);
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #f759b8;;
+	box-shadow: 0px 2px 2px #fd90dd;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.brands .fa-brands {
-	padding: 12px 21px;
+.social-login__icon {
+	padding: 20px 10px;
 	color: black;
 	text-decoration: none;	
-	text-shadow:  #ee6ab7;
+	text-shadow: 0px 0px 8px #7875B5;
 }
 
-</style>
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
+.image{
+    height: 600px;
+	width: 760px;
+	display: inline-flex;
+	position:relative;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.screen__content h1 {
+	padding-top: 20px;
+    justify-content: center;
+    font-size: 25px;
+    display: flex;
+}
+h1 {
+	color: rgba(175, 2, 69, 0.4);
+}
+    </style>
 </head>
 <body>
     <div class="container">
-        <img class="image" src="register.png" alt="register"  >
-        <div id="register" class="page">
-            <form action="action_page.php">
-                 <h1>GET STARTED</h1><br>
-            <div >
-                <label for="Name"> <h2>Name</h2> </label>
-                 <input type="text" placeholder="Name" name="Name" id="Name"  >
-            </div>
-            <div>
-                <Label for="Email"><h2>Email</h2></Label>
-                <input type="text" placeholder="Email" name="Email" id="Email">
-            </div>
-            <div>
-                <label for="Password"><h2>Password</h2></label>
-                <input type="text" placeholder="Password" name="Password" id="Password" >
-            </div>
-            <a href="https://google.com"
-                    class="btn" >Sign Up</a>
-                    
-            <a id="button" href="login.html"
-                     class="btn">Sign In</a>
-            <div class="continue" id="website" >
-                <p>or continue with</p>
-            <div class="brands">
-                <a href="https://vk.com" class="fa-brands fa-vk" style="color:rgb(248, 186, 196);"></a> 
-                <a href="https://google.com" class="fa-brands fa-google" style="color:rgb(248, 186, 196);"></a>  
-                <a href="https://facebook.com" class="fa-brands fa-facebook" style="color:rgb(248, 186, 196);"></a> 
-        </div> </div>
-                <div class="policy" >
-                   
-                    <input type="checkbox" name="accept-policies" id="accept-policies" value="I Agree to the terms of Service and privacy policy" required="required">
-                    <label for="accept-policies">I  agree to the
-                        <a href="/tos" class="strong">
-                          Terms of Service</a>
-                              and
-                        <a href="/privacy" class="strong">Privacy Policy</a>
-                        
-                    </label>
+        <img class="image" src="officegirls.jpg" alt="office">
+        <div class="screen">
+			 <div class="screen__content">
+				<h1>Login</h1>
+                  <form class="login">
+					<div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="User name">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password">
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button><br>				
+                </form>
+                <div class="social-login"><br>
+                    <h3>log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
                 </div>
-              </div>
-            </form>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
         </div>
     </div>
-  </body>
+</body>
 </html>
